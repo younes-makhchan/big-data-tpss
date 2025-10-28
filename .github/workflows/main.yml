@@ -1,6 +1,7 @@
 name: Trigger Jenkins Manually
 
 on:
+    pull_request:
     workflow_dispatch:
       inputs:
         pr_number:
@@ -8,10 +9,9 @@ on:
           required: true
 
 jobs:
-  trigger:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Jenkins
         run: |
-          curl -X POST "https://public-endpoint/job/MY_JOB/buildWithParameters" \
-            "auth_token:${{ secrets.JENKINS_TOKEN }}"
+          echo "Hello"
