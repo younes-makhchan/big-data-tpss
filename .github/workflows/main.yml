@@ -1,7 +1,11 @@
 name: Trigger Jenkins Manually
 
 on:
-  workflow_dispatch:
+    workflow_dispatch:
+      inputs:
+        pr_number:
+          description: 'PR number to test'
+          required: true
 
 jobs:
   trigger:
