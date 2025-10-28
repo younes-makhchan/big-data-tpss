@@ -2,10 +2,8 @@ name: Trigger Jenkins Manually
 
 on:
     workflow_dispatch:
-      inputs:
-        pr_number:
-          description: 'PR number to test'
-          required: true
+    pull_request_target:
+      types: [ opened, synchronize, reopened ]
 
 jobs:
   build:
