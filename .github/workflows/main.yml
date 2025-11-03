@@ -3,7 +3,7 @@ name: lightweightRegression
 on:
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   run-lightweight-regression:
