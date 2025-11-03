@@ -1,14 +1,26 @@
-name: Trigger Jenkins Manually
+name: lightweightRegression
 
 on:
-    workflow_dispatch:
-    pull_request_target:
-      types: [ opened, synchronize, reopened ]
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
+  lightweightRegression:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Jenkins
-        run: |
-          echo "Hello"
+      - uses: actions/checkout@v4
+
+      # Set up your environment here if needed (Node, Java, Python, etc.)
+
+      # Example for Gradle (Kotlin/JVM project):
+      - name: Run lightweightRegression
+        run: echo "Hello"
+
+      # Or for npm/yarn project:
+      # - name: Run lightweightRegression
+      #   run: npm run lightweightRegression
+
+      # Or for a shell script:
+      # - name: Run lightweightRegression
+      #   run: ./lightweightRegression.sh
