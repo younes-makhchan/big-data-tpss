@@ -9,18 +9,5 @@ jobs:
   lightweightRegression:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      # Set up your environment here if needed (Node, Java, Python, etc.)
-
-      # Example for Gradle (Kotlin/JVM project):
       - name: Run lightweightRegression
         run: echo "Hello"
-
-      # Or for npm/yarn project:
-      # - name: Run lightweightRegression
-      #   run: npm run lightweightRegression
-
-      # Or for a shell script:
-      # - name: Run lightweightRegression
-      #   run: ./lightweightRegression.sh
