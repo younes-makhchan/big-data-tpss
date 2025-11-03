@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Execute script
         run: |
-          echo "This will fail on purpose"
+          echo "This will fail on purpose 1"
           exit 1
